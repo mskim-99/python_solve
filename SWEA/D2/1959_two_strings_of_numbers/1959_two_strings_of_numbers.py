@@ -21,3 +21,34 @@ for tc in range(T):
         max_value = max(max_value, result)
 
     print(f"#{tc + 1} {max_value}")
+
+
+# 8/31 두번 째 풀이
+# 길이 N인 배열 Ai
+# 길이 M인 배열 Bj
+
+# 각 배열을 자유롭게 움직여 숫자를 마주보는 위치 변경 가능
+# 더 긴쪽의 양 끝을 벗어나면 안된다.
+
+# 3 <= N <= 20
+# 3 <= M <= 20
+
+# T = int(input())
+
+# for tc in range(T):
+#     N, M = map(int, input().split())
+#     Ai = list(map(int, input().split()))
+#     Bj = list(map(int, input().split()))
+
+#     if N > M:   # N이 항상 더 작다는 가정
+#         Ai, Bj = Bj, Ai
+#         N, M = M, N
+
+#     result = []
+#     for i in range(M-N+1):
+#         count = 0
+#         for j in range(N):
+#             count += (Ai[j] * Bj[j+i])
+#         result.append(count)
+
+#     print(f"#{tc+1} {max(result)}")
